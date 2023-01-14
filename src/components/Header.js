@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from './Navigation'
+import Project from './pages/Project'
+import Resume from './pages/Resume'
+import About from './pages/About'
+import Contact from './pages/Contact'
+
 
 export default function Header() {
-    const [currentPage, setCurrentPage] = useState('Portfolio');
+    const [currentPage, setCurrentPage] = useState('About');
 
     const renderPage = () => {
         if(currentPage === 'Portfolio') {
-            return <Portfolio />;
+            return <Project />;
         }
         if (currentPage === 'About') {
             return <About />;
@@ -17,7 +22,7 @@ export default function Header() {
         return <Resume />;
     };
 
-    handlePageChange = (page) => setCurrentPage(page);
+    const handlePageChange = (page) => setCurrentPage(page);
 
     return(
         <div>
@@ -26,9 +31,10 @@ export default function Header() {
                     <h1>
                         Brad D. Wagner
                     </h1>
-                    <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />                   
                 </div>
+                <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />    
             </header>
+            <div className='spacer'></div>
             {renderPage()}
         </div>
 

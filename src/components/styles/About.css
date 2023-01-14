@@ -1,0 +1,23 @@
+/* Sets size contraints on the headshot image and creates border  */
+#headshot{
+    float: left;
+    width: 25%;
+    margin-bottom: -3px;
+    border: 10px;
+    border-style: solid;
+    border-color: var(--wood);
+    max-height: 400px;
+    max-width: 400px;
+ }
+
+ .about-page h1{
+    color: var(--wood);
+    text-align: center;
+    padding: 20px;
+ }
+.about-page p{
+    background-color: var(--cherry);
+
+    margin-left: 25%;
+    padding: 30px;
+ }

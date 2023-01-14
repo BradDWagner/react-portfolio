@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+/* Declare color variables  */
+:root{
+  --matte: #464646;
+  --ivory: #ecf9fb;
+  --wood: #b19865;
+  --cherry: #d5b6bc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Smooths out scrolling using navigation links and adds padding so that navbar doesn't cover destination  */
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top: 90px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Sets formatting of containers so that children stay within the parent element  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--matte);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Set background color for the page  */
+body{
+  background-color: var(--matte);
+}
+
+/* Sets font styling for 'Brad D. Wagner ' */
+h1 {
+  color: var(--matte);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+/* Sets flex-box for the header and establishes margins around it. Also extablishes it as a fixed element */
+.header-box{
+  position: fixed;
+  clear: both;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 20px;
+  background-color: var(--cherry);
+}
+
+/* Establishes width of 'name' box and sets font size for the h1 */
+.name {
+  width: 50%;
+  position: relative;
+}
+
+/* Establishes width of 'nav-bar' box  */
+.nav-bar{
+  width: 50%;
+}
+
+/* Allows ul to take up entirety of the 'nav-bar' box, sets a new flex-box with the children alligned in the center, and removes bullet points from the list */
+.nav-bar ul{
+  height: 100%;
+  width: 100%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  list-style-type: none;
+  
 }
 
-.App-link {
-  color: #61dafb;
+/* Sets font size of li allows the items to flex within the box and auto adjust their spacing */
+.nav-bar ul li{
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  flex: 1 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Uses pseudo-selectors to set different color states for the nav links  */
+.nav-link{
+  color: var(--matte);
+}
+.nav-link:hover{
+  color: var(--wood);
+}
+.active{
+  color: var(--ivory);
+}
+
+.spacer{
+  width:100%;
+  height: 97px;
 }
