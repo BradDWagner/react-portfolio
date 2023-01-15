@@ -1,0 +1,92 @@
+/* Establishes flex-box around each of the three main sections and sets them to display in a row  */
+/* .project-page{
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction: row;
+    background-color: var(--matte);
+    padding: 10px;
+    margin: 10px;
+} */
+
+.project-page h1{
+    width: 100%;
+    color: var(--wood);
+    text-align: center;
+    padding: 20px 20px 0px;
+}
+
+/* Creates container for each 'work-box' card  */
+.work-container {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    padding: 30px;
+    background-color: var(--matte);
+}
+
+/* Creates card for each image and text overlay, giving each half of the container's width and a third of its height  */
+.work-image-box{
+    position: relative;
+    width: 35%;
+    height: 33%;
+    max-height: 400px;
+    flex: 1 0 auto;
+    margin: 0px 20px 40px 20px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 7px;
+    border-color: var(--wood);
+
+}
+
+/* Creates shadow around images while they're being hovered over  */
+.work-image-box:hover {
+    box-shadow: 0px 0px 15px var(--cherry);
+}
+
+
+/* Removes the text from the flow in order to position it over the image and sets styling for text  */
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 0px;
+    padding: 10px;
+    width: 50%;
+    background-color: var(--wood);
+    
+}
+
+.overlay:hover {
+    box-shadow: 0px 0px 15px var(--cherry);
+}
+
+.gitHub {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    width: 25%;
+    opacity: 0.7;
+}
+
+.gitHub:hover {
+    opacity: 1;
+}
+/* displays overlay on hover */
+.work-image-box:hover .overlay{
+    visibility: visible;
+}
+
+.work-image-box:hover .gitHub{
+    visibility: visible;
+}
+
+/* Sets font styling for coding project titles  */
+.overlay h3{
+    color: var(--cherry);
+    font-weight: bold;
+    font-size: 35px;
+    text-shadow: -1px 1px #4f232b;
+}

@@ -1,3 +1,13 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+
 /* Declare color variables  */
 :root{
   --matte: #464646;
@@ -28,7 +38,7 @@ body{
 /* Sets font styling for 'Brad D. Wagner ' */
 h1 {
   color: var(--matte);
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 50px;
 }
 
@@ -87,5 +97,73 @@ h1 {
 
 .spacer{
   width:100%;
-  height: 97px;
+  height: 90px;
+}
+
+@media screen and (max-width: 992px) {
+
+ /* Shrinks down the size of image cards and their margins to better fit smaller screen  */
+ .work-image-box{
+  max-height: 300px;
+  /* margin: 10px; */
+ }
+ 
+  /* Shrink text to avoid cramming  */
+ .overlay h3{
+  font-size: 20px;
+  text-align: left;
+}
+ #contact ul li{
+  font-size: 12px;
+ }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+  /* Changes the flex direction from rows to columns  */
+ .header-box {
+  flex-direction: column;
+ }
+
+ /* Centers the heading elements horizontally instead of the previous 50/50 split  */
+ .name,
+ .nav-bar {
+  width: 100%;
+  text-align:center;
+  }
+
+  /* Adjust font sizes to fit on smaller screens  */
+  h1 {
+      font-size: 35px;
+  }
+  .nav-bar ul li{
+      font-size: 20px;
+  }
+  .overlay h3{
+      font-size: 15px;
+      text-align: left;
+  }
+  .overlay p {
+      font-size: 12px;
+      text-align: left;
+  }
+  #contact li{
+      font-size: 10px;
+  }
+ 
+
+  /* Centers the different body elements horizontally instead of previous 30/70 split, and removes seperating vertical border  */
+  .work-container{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      border-width: 0px;
+  }
+
+  /* resizes link images to better fit smaller screen  */
+  .work-image-box{
+      margin:8px;
+      max-height: 200px;
+  } 
 }

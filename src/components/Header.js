@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navigation from './Navigation'
-import Project from './pages/Project'
+import Portfolio from './pages/Portfolio'
 import Resume from './pages/Resume'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -11,7 +11,7 @@ export default function Header() {
 
     const renderPage = () => {
         if(currentPage === 'Portfolio') {
-            return <Project />;
+            return <Portfolio />;
         }
         if (currentPage === 'About') {
             return <About />;
