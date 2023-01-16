@@ -7,7 +7,7 @@ import Contact from './pages/Contact'
 
 
 export default function Header() {
-    const [currentPage, setCurrentPage] = useState('About');
+    const [currentPage, setCurrentPage] = useState('Contact');
 
     const renderPage = () => {
         if(currentPage === 'Portfolio') {

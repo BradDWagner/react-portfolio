@@ -1,0 +1,44 @@
+.contact-page h1{
+    width: 100%;
+    color: var(--wood);
+    text-align: center;
+    padding: 20px 20px 0px;
+}
+
+.form {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction:column
+}
+
+input,
+textarea {
+    display:block;
+    width: 70%;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+textarea {
+    height: 200px;
+}
+
+.form label{
+    color: var(--wood);
+    font-size: 30px;
+}
+
+.error-text{
+    color: var(--cherry);
+    font-size: 25px;
+
+}
+
+.form button{
+    background-color: var(--wood);
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    margin-top: 10px;
+}

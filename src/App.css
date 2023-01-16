@@ -28,6 +28,7 @@ html{
   margin: 0;
   padding: 0;
   color: var(--matte);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Set background color for the page  */

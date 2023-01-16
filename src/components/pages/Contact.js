@@ -1,22 +1,94 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../styles/Contact.css';
+import { validateEmail } from '../utils/validateEmail';
 
 export default function Contact() {
-  return (
-    <div>
-      <h1>Contact Page</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
-  );
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleInputChange = (e) => {
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
+
+        if (inputType === 'Name') {
+            setName(inputValue);
+        } else if (inputType === 'Email') {
+            setEmail(inputValue);
+        } else if (inputType === 'Message') {
+            setMessage(inputValue);
+        }
+    };
+
+    const handleblur = (e) => {
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
+
+        if (inputValue.length < 1) {
+            setErrorMessage(`${inputType} is required`);
+        } else {
+            setErrorMessage('');
+        }
+    };
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+
+        if (!name || !email || !message) {
+            setErrorMessage('Please fill out all fields')
+            return;
+        }else if (!validateEmail(email)) {
+            setErrorMessage('Please enter a valid email')
+            return;
+        } else {
+            setErrorMessage('Thank you for your message!')
+            setName('');
+            setEmail('')
+            setMessage('');
+        }
+    };
+
+    return (
+        <div className='contact-page'>
+            <h1>Contact Page</h1>
+            <form className='form'>
+                <label for='Name'>Name:</label>
+                <input
+                    value={name}
+                    name='Name'
+                    onChange={handleInputChange}
+                    onBlur={handleblur}
+                    type='text'
+                />
+                <label for='Email'>Email address:</label>
+                <input
+                    value={email}
+                    name='Email'
+                    onChange={handleInputChange}
+                    onBlur={handleblur}
+                    type='email'
+                />
+                <label for='Message'>Message:</label>
+                <textarea
+                    value={message}
+                    name='Message'
+                    onChange={handleInputChange}
+                    onBlur={handleblur}
+                />
+
+                {errorMessage && (
+                    <div>
+                        <p className="error-text">{errorMessage}</p>
+                    </div>
+                )}
+
+                <button type='button' onClick={handleFormSubmit}>
+                    Submit
+                </button>
+            </form>
+        </div>
+    );
 }
