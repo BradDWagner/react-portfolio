@@ -80,7 +80,7 @@ h1 {
 
 /* Sets font size of li allows the items to flex within the box and auto adjust their spacing */
 .nav-bar ul li{
-  font-size: 30px;
+  font-size: 28px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   flex: 1 0 auto;
 }
@@ -168,7 +168,6 @@ h1 {
       font-size: 10px;
   }
  
-
   /* Centers the different body elements horizontally instead of previous 30/70 split, and removes seperating vertical border  */
   .work-container{
       width: 100%;

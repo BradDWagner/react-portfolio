@@ -1,13 +1,12 @@
 /* Sets size contraints on the headshot image and creates border  */
 #headshot{
     float: left;
-    width: 25%;
-    margin-bottom: -3px;
-    border: 10px;
+    width: 30%;
+    margin: 0px 20px 10px 0px;
+    border: 7px;
     border-style: solid;
     border-color: var(--wood);
-    max-height: 400px;
-    max-width: 400px;
+    max-width: 250px;
  }
 
  .about-page h1{
@@ -17,6 +16,8 @@
  }
 .about-page p{
     background-color: var(--cherry);
-    margin-left: 25%;
     padding: 30px;
+    font-size: 24px;
+    min-height: 307px;
+    margin: 0 50px
  }

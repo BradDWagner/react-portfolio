@@ -5,9 +5,10 @@ import headshot from '../images/headshot.png'
 export default function About() {
   return (
     <div className='about-page'>
-        <img id="headshot" src={headshot} alt="a portrait of Brad Wagner, standing in front of a cherry tree."></img>
         <h1>About Page</h1>
+
         <p>
+        <img id="headshot" src={headshot} alt="a portrait of Brad Wagner, standing in front of a cherry tree."></img>
             Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
             Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
             mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non

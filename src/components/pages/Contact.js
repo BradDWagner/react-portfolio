@@ -27,10 +27,10 @@ export default function Contact() {
         const inputType = target.name;
         const inputValue = target.value;
 
-        if (inputType === 'Name' || inputType === 'Message' && inputValue.length < 1) {
+        if ((inputType === 'Name' || inputType === 'Message') && inputValue.length < 1) {
             setErrorMessage(`${inputType} is required`);
             return;
-        } else if (!validateEmail(inputValue)) {
+        } else if (inputType === 'Email' && !validateEmail(inputValue)) {
             setErrorMessage('Please enter a valid email');
             return;
         } else {
