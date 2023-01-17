@@ -1,21 +1,41 @@
 import React from 'react';
+import '../styles/Resume.css';
 
 export default function Resume() {
-  return (
-    <div>
-      <h1>Resume</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
-        velit, lobortis ut magna varius, blandit rhoncus sem. Morbi lacinia nisi
-        ac dui fermentum, sed luctus urna tincidunt. Etiam ut feugiat ex. Cras
-        non risus mi. Curabitur mattis rutrum ipsum, ut aliquet urna imperdiet
-        ac. Sed nec nulla aliquam, bibendum odio eget, vestibulum tortor. Cras
-        rutrum ligula in tincidunt commodo. Morbi sit amet mollis orci, in
-        tristique ex. Donec nec ornare elit. Donec blandit est sed risus feugiat
-        porttitor. Vestibulum molestie hendrerit massa non consequat. Vestibulum
-        vitae lorem tortor. In elementum ultricies tempus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus.
-      </p>
-    </div>
-  );
+    return (
+        <div className='resume-page'>
+            <h1>Resume</h1>
+            <p>
+                <a href='https://docs.google.com/document/d/1Fpl7_CsdjkJnQJwF9seU-q6aBrzgcNXssimE5t8oypU/edit?usp=sharing'>Download my resume</a>
+            </p>
+            <div className='resume-container'>
+                <div>
+                <h2>Front-end Proficiencies</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>responsive design</li>
+                    <li>React</li>
+                    <li>Bootstrap</li>
+                </ul>
+                </div>
+                <div>
+                    <h2>Back-end Proficiencies</h2>
+                    <ul>
+                        <li>APIs</li>
+                        <li>Node</li>
+                        <li>Express</li>
+                        <li>MySQL, Sequelize</li>
+                        <li>MongoDb, Mongoose</li>
+                        <li>Rest</li>
+                        <li>GraphQL</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    );
 }

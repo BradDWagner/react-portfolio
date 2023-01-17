@@ -101,6 +101,22 @@ h1 {
   height: 90px;
 }
 
+.footer {
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
+
+.footer img{
+  width: 50px;
+  opacity: 0.7;
+  margin: 20px 40px 40px
+}
+
+.footer img:hover{
+  opacity:1;
+}
+
 @media screen and (max-width: 992px) {
 
  /* Shrinks down the size of image cards and their margins to better fit smaller screen  */
@@ -114,16 +130,15 @@ h1 {
   font-size: 20px;
   text-align: left;
 }
- #contact ul li{
-  font-size: 12px;
- }
+
 }
 
 
 @media screen and (max-width: 768px) {
     
   /* Changes the flex direction from rows to columns  */
- .header-box {
+ .header-box,
+ .resume-container {
   flex-direction: column;
  }
 

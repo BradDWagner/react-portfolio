@@ -57,7 +57,7 @@ export default function Contact() {
 
     return (
         <div className='contact-page'>
-            <h1>Contact Page</h1>
+            <h1>Contact</h1>
             <form className='form'>
                 <label for='Name'>Name:</label>
                 <input

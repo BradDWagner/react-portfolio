@@ -1,0 +1,44 @@
+.resume-page h1{
+    width: 100%;
+    color: var(--wood);
+    text-align: center;
+    padding: 20px 20px 0px;
+}
+
+.resume-page p{
+    color: var(--ivory);
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.resume-page a{
+    color: var(--ivory);
+}
+
+.resume-page a:hover{
+    color: var(--cherry)
+}
+
+.resume-container{
+    padding: 30px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.resume-container h2{
+    color: var(--cherry);
+    font-size: 30px;
+}
+
+.resume-container ul{
+    list-style-type: disc;
+}
+
+.resume-container li{
+    color: var(--ivory);
+    margin:10px 10px 10px 40px;
+    font-size: 20px;
+}
