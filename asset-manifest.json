@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.07adc2b2.css",
+    "main.js": "/react-portfolio/static/js/main.743908d1.js",
+    "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/apple-blossoms.png": "/react-portfolio/static/media/apple-blossoms.3bda7e25cbaa34b47b2a.png",
+    "static/media/cherry-blossoms.png": "/react-portfolio/static/media/cherry-blossoms.f179c30199455c4771fd.png",
+    "static/media/dead-tree.png": "/react-portfolio/static/media/dead-tree.4757277649a1b7ac69db.png",
+    "static/media/pond.png": "/react-portfolio/static/media/pond.1e3505539c983d71a10a.png",
+    "static/media/sky.png": "/react-portfolio/static/media/sky.a0f85879ac2665d1f3af.png",
+    "static/media/field.png": "/react-portfolio/static/media/field.9a63ed3dd72c59781f1c.png",
+    "static/media/headshot.png": "/react-portfolio/static/media/headshot.f15bc4d6e442576a027d.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.07adc2b2.css.map": "/react-portfolio/static/css/main.07adc2b2.css.map",
+    "main.743908d1.js.map": "/react-portfolio/static/js/main.743908d1.js.map",
+    "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07adc2b2.css",
+    "static/js/main.743908d1.js"
+  ]
+}
