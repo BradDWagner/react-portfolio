@@ -96,6 +96,7 @@ h1 {
   color: var(--ivory);
 }
 
+/* spacer element to account for fixed header */
 .spacer{
   width:100%;
   height: 90px;
