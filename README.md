@@ -22,7 +22,10 @@
 
   ## Usage
 
-  The deployed application can be found here.
+  The deployed application can be found [here](https://braddwagner.github.io/react-portfolio/).
+
+  ![screen shot of deployed app](./assets/deployed-app.png)
+  
   To load the application via this repository, use either ```npm run start``` to run it in development mode, or ```npm run build``` to run the build which can then be deployed via the index.html.
   Once running the application different pages can be selected from the navigation bar on the top right. The About page contains some information about me. On the Work page the user can find information and links to my previous projects by hovering over each image. On the Contact page the user can enter in their name, email, and message in order to contact me (note: back-end of the application is not yet functional so please reach out using the links in the footer). The Resume page lists my web-development proficencies as well as a link to my downloadable resume. And finally links to my GitHub and LinkedIn can be found in the footer.
 
