@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 import { validateEmail } from '../utils/validateEmail';
 
@@ -38,7 +39,9 @@ export default function Contact() {
         }
     };
 
-    const handleFormSubmit = (e) => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
         e.preventDefault();
 
         if (!name || !email || !message) {
@@ -53,13 +56,20 @@ export default function Contact() {
             setEmail('')
             setMessage('');
         }
-    };
+
+        emailjs.sendForm('service_fmbeois', 'contact_form1990', form.current, 'pGOB5D2K56jXb8wWH')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        })
+    }
 
     return (
         <div className='contact-page'>
             <h1>Contact</h1>
-            <form className='form'>
-                <label for='Name'>Name:</label>
+            <form className='form' ref={form}>
+                <label htmlFor='Name'>Name:</label>
                 <input
                     value={name}
                     name='Name'
@@ -67,7 +77,7 @@ export default function Contact() {
                     onBlur={handleblur}
                     type='text'
                 />
-                <label for='Email'>Email address:</label>
+                <label htmlFor='Email'>Email address:</label>
                 <input
                     value={email}
                     name='Email'
@@ -75,7 +85,7 @@ export default function Contact() {
                     onBlur={handleblur}
                     type='email'
                 />
-                <label for='Message'>Message:</label>
+                <label htmlFor='Message'>Message:</label>
                 <textarea
                     value={message}
                     name='Message'
@@ -89,7 +99,7 @@ export default function Contact() {
                     </div>
                 )}
 
-                <button type='button' onClick={handleFormSubmit}>
+                <button type='button' onClick={sendEmail}>
                     Submit
                 </button>
             </form>
