@@ -10,6 +10,7 @@ export default function Project(props) {
             <a href={props.url}>
                 <div className="overlay">
                     <h3>{props.title}</h3>
+                    <p className="tech">{props.tech}</p>
                     <p>{props.desc}</p>
                 </div>
             </a>

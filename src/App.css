@@ -125,10 +125,20 @@ h1 {
   max-height: 300px;
   /* margin: 10px; */
  }
+
+ .overlay{
+  top: 30%;
+  width: 60%;
+}
+
+.gitHub{
+  top: 30%;
+  left: 70%;
+}
  
   /* Shrink text to avoid cramming  */
  .overlay h3{
-  font-size: 20px;
+  font-size: 25px;
   text-align: left;
 }
 
@@ -156,13 +166,14 @@ h1 {
   }
   .nav-bar ul li{
       font-size: 20px;
+      margin-top: 5px;
   }
-  .overlay h3{
-      font-size: 15px;
-      text-align: left;
+
+  .overlay {
+    top: 5%;
   }
+
   .overlay p {
-      font-size: 12px;
       text-align: left;
   }
   #contact li{
@@ -181,5 +192,6 @@ h1 {
   .work-image-box{
       margin:8px;
       max-height: 200px;
+      width: 100%;
   } 
 }
